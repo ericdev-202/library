@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="/static/assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <!-- Begin: Nav -->
+            <ul id="nav">
+                <div class="logo" style="padding: 0 10px 0 0; width: 55px; height: 45px;">
+                    <a href="/"><img src="https://template68194.motopreview.com/mt-demo/68100/68194/mt-content/uploads/2018/07/mt-1519-logo.png" alt="Logo" style="width: 45px; height: 45px" ></a>
+                </div>
+                <li><a href="/">Home</a></li>
+                <li><a href="">Collections</a></li>
+            </ul>
+            <!-- End: Nav -->
+
+            <!-- Begin: Search Book -->
+            <form method="POST" action="/search-book" class="search-book">
+                {% csrf_token %}
+                    <input class="search-text" type="text" name="book" placeholder="Enter author, subject name or title">
+                    <div class="search_btn_block">
+                        <button class="search_btn" type="submit">SEARCH</button>
+                    </div>
+            </form>
+            <!-- End: Search Book -->
+
+            <!-- Begin: Login -->
+            <div class="login-form">
+                <a href="/Memberregister">
+                    <button class="button-register">REGISTER</button>
+                </a>
+            </div>
+            <div class="login-form">
+                <a href="/login">
+                    <button class="button-login">MEMBERS LOGIN</button>
+                </a>
+            </div>
+            <div class="login-form">
+                <a href="/login">
+                    <button class="button-login">LIBRARIAN LOGIN</button>
+                </a>
+            </div>
+            <!-- End: Login -->
+        </div>
+    </div>
+</body>
+</html>
